@@ -1,3 +1,10 @@
+Worked on this repo:
+
+Taeil Kwak:
+Checkpoint 15 - Taeil Kwak
+Checkpoint 17 - Taeil Kwak and Thomas Davis
+Checkpoint 18 - Taeil Kwak and Jacob Poteat
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
