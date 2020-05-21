@@ -7,6 +7,7 @@ class NoteDetails extends React.Component {
   static contextType = FileContext;
 
   render() {
+    console.log(this.props);
     if (this.props.note === undefined) {
       return <Redirect to='/'></Redirect>
     }
