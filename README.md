@@ -5,6 +5,11 @@ Checkpoint 15 - Taeil Kwak
 Checkpoint 17 - Taeil Kwak and Thomas Davis
 Checkpoint 18 - Taeil Kwak and Jacob Poteat
 
+Jacob Poteat:  
+Checkpoint 15 & 17 - Jacob Poteat and Ryan Vargas:  https://github.com/thinkful-ei-orka/Noteful-Jacob-Ryan.git
+
+Checkpoint 18 - Taeil Kwak and Jacob Poteat:  https://github.com/thinkful-ei-orka/noteful-taeil
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
