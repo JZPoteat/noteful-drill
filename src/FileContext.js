@@ -1,12 +1,12 @@
 import React from 'react';
-
+import { Redirect } from 'react-router-dom';
 const FileContext = React.createContext();
 export default FileContext;
 
 export class FileContextProvider extends React.Component {
     state = {
-        folders: [],
-        notes: []
+        folders: null,
+        notes: null,
     }
 
     componentDidMount = () => {
@@ -60,6 +60,36 @@ export class FileContextProvider extends React.Component {
             .catch(error => { return error.message })
     }
 
+    addNote = (noteName, folderId, content, dateModified) => {
+        let body = { 
+            name: noteName,
+            modified: dateModified,
+            folderId: folderId,
+            content: content
+         };
+
+        fetch(`http://localhost:9090/notes`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("bad stuff yo");
+                } return res.json()
+            })
+            .then(data => {
+                let notes = this.state.notes;
+                notes.push(data);
+                this.setState({
+                    notes: notes
+                })
+            })
+            .catch(error => { return error.message })
+    }
+
     deleteNote = (noteID) => {
         fetch(`http://localhost:9090/notes/${noteID}`, {
             method: 'DELETE',
@@ -83,6 +113,9 @@ export class FileContextProvider extends React.Component {
     }
 
     render() {
+        if(this.state.folders === null || this.state.notes === null) {
+            return (<div>Loading</div>)
+        }
         return (
             <FileContext.Provider value={{
                 folders: this.state.folders,
