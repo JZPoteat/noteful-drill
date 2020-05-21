@@ -51,14 +51,11 @@ export class FileContextProvider extends React.Component {
                 } return res.json()
             })
             .then(data => {
-                console.log('data', data);
-                /*
                 let folders = this.state.folders;
-                folders.push(folderName);
+                folders.push(data);
                 this.setState({
-                    notes: newNotes
+                    folders: folders
                 })
-                */
             })
             .catch(error => { return error.message })
     }
