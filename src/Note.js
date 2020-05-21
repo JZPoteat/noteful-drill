@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import FileContext from './FileContext';
+import PropTypes from 'prop-types';
 
 class Note extends React.Component {
   static contextType = FileContext;
@@ -58,6 +59,11 @@ class Note extends React.Component {
       </NavLink>
     );
   }
+}
+
+Note.propTypes = {
+  isLink: PropTypes.bool.isRequired,
+  note: PropTypes.object.isRequired
 }
 
 export default Note;

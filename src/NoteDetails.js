@@ -2,6 +2,7 @@ import React from 'react';
 import Note from './Note';
 import FileContext from './FileContext';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class NoteDetails extends React.Component {
   static contextType = FileContext;
@@ -21,6 +22,10 @@ class NoteDetails extends React.Component {
       </div>
     );
   }
+}
+
+NoteDetails.propTypes = {
+  routeProps: PropTypes.object.isRequired,
 }
 
 export default NoteDetails;

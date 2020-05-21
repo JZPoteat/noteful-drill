@@ -3,12 +3,12 @@ import Note from './Note';
 import FileContext from './FileContext';
 import { NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class NotesList extends React.Component {
   static contextType = FileContext;
 
   render() {
-    console.log(this.props.routeProps)
     let notes = [];
 
     if (typeof this.props.routeProps !== 'undefined') { // A folder is filtered
@@ -35,6 +35,10 @@ class NotesList extends React.Component {
       </div>
     );
   }
+}
+
+NotesList.propTypes = {
+  routeProps: PropTypes.object,
 }
 
 export default NotesList;
