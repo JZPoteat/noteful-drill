@@ -11,7 +11,7 @@ class Note extends React.Component {
     }
     let noteFolderId = this.props.note.folderId;
     let noteFolder = this.context.folders.filter((folder) => folder.id === noteFolderId);
-    let navLink = `/${noteFolder[0].name}/${this.props.note.name}`;
+    let navLink = `/folder/${noteFolder[0].name}/${this.props.note.name}`;
 
     let modifiedDate = new Date(this.props.note.modified);
 

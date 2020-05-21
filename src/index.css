@@ -78,7 +78,7 @@ main {
 .folders a.active {
   background: #ddd;
 }
-.folders button {
+.folders .add-folder-link {
   width: calc(100% - 20px);
   margin: 10px;
 }
@@ -109,6 +109,9 @@ main a button {
   height: 40px;
   align-self: flex-end;
 }
+main .addNoteLink {
+  display: inline-block;
+}
 
 /*------------------
   Note Sidebar
@@ -122,8 +125,6 @@ main a button {
 .note-sidebar h2 {
   text-align: right;
 }
-
-
 
 /*------------------
   Note Details

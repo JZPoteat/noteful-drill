@@ -1,7 +1,7 @@
 import React from 'react';
 import Note from './Note';
 import FileContext from './FileContext';
-import { Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class NotesList extends React.Component {
   static contextType = FileContext;
@@ -27,7 +27,7 @@ class NotesList extends React.Component {
     return (
       <div>
         {notes}
-        <button type="button">Add note</button>
+        <NavLink to='/add/note' className="addNoteLink">Add note</NavLink>
       </div>
     );
   }

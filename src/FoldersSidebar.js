@@ -1,6 +1,7 @@
 import React from 'react';
 import Folder from './Folder';
 import FileContext from './FileContext';
+import { NavLink } from 'react-router-dom';
 
 class FoldersSidebar extends React.Component {
   static contextType = FileContext;
@@ -15,7 +16,7 @@ class FoldersSidebar extends React.Component {
     return (
       <div className="folders">
         {folders}
-        <button type="button">Add folder</button>
+        <NavLink to='/add/folder' className="add-folder-link">Add folder</NavLink>
       </div>
     );
   }
